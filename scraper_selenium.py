@@ -20,7 +20,7 @@ class ScraperConfig:
     start_row_index: int = 3
     row_increment: int = 3
     request_delay: float = 0.3
-    output_file: str = "house_price.xlsx"
+    output_file: str = "house_price.csv"
 
 
 class HouseDataScraper:
@@ -126,7 +126,7 @@ class HouseDataScraper:
                 df.loc[len(df)] = house_info
 
             # Save to Excel
-            df.to_excel(self.config.output_file, index=False)
+            df.to_csv(self.config.output_file, index=False)
             print(f"Data successfully saved to {self.config.output_file}")
 
         finally:
