@@ -2,7 +2,6 @@ import time
 from dataclasses import dataclass
 from typing import Dict, List
 
-
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -35,8 +34,6 @@ class HouseDataScraper:
         "Bathrooms": 169,
         "YearBuilt": 172,
         "Age": 173,
-        "Zoning": 174,
-        "GrossTaxes": 175,
         "LotAreaSqft": 166,
         "FloodPlain": 289,
         "View": 288,
@@ -46,9 +43,9 @@ class HouseDataScraper:
         "FinishedFloorTotalSqft": 239,
         "Suite": 381,
         "Basement": 386,
-        "DistToTransit": 269,
-        "DistToSchoolBus": 270,
-        "SoldDate": 266
+        "SoldDate": 266,
+        "NumberOfLevels": 254,
+        "NumberOfRooms": 253
     }
 
     def __init__(self, config: ScraperConfig):
